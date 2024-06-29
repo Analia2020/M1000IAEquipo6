@@ -65,6 +65,7 @@ def clasificador():
     st.write('<iframe src="https://nancy1906-equipo-6-proyecto-breast-cancer.hf.space" width="800" height="600"></iframe>', unsafe_allow_html=True)
     # Aquí puedes agregar el código para tu clasificador
     # Por ejemplo, un clasificador simple de texto:
+    st.write("⚠️ **Esta herramienta no ha sido validada para uso profesional, solo tiene fines educativos**")
    
 
 # Diccionario para navegar entre las pestañas
