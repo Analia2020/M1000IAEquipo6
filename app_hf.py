@@ -15,7 +15,7 @@ def home():
         - **Clasificador:** Utiliza nuestra herramienta de clasificación de ecografias mamarias.
     """)
 
-    ##st.subheader("Contexto")
+    #expander = st.expander("## Contexto")
     st.write("""
    
              ## Contexto
@@ -34,13 +34,12 @@ La IA ofrece un sinfín de posibilidades para transformar la lucha contra el cá
 
 Los sistemas de IA para la detección del cáncer de mama con ecografías se basan en el aprendizaje automático y el aprendizaje profundo. Estos algoritmos son entrenados con grandes conjuntos de datos de imágenes de ecografías mamarias, tanto con casos de cáncer como benignos. A través del análisis de estas imágenes, la IA aprende a identificar patrones y características asociadas con el cáncer, permitiéndole clasificar nuevas imágenes con alta precisión.
 
-### ¿Cuál es el futuro de la IA en la detección del cáncer de mama con ecografías?
-
-La investigación en el campo de la IA y el cáncer de mama está en constante avance. Se espera que en el futuro, los sistemas de IA sean aún más precisos, eficientes y capaces de identificar incluso cánceres en etapas más tempranas. Además, la IA se integrará cada vez más con otras tecnologías, como la robótica y la impresión 3D, para ofrecer herramientas aún más sofisticadas para el diagnóstico y tratamiento del cáncer de mama.
-
 La IA **no reemplaza al médico, sino que lo complementa.** Es fundamental recordar que la IA es una herramienta de apoyo para el diagnóstico médico, no un reemplazo del juicio y la experiencia del médico especialista. La IA debe utilizarse en conjunto con la evaluación clínica para brindar a las pacientes la mejor atención posible.
 
 Juntos, la IA y los profesionales de la salud pueden marcar una diferencia significativa en la lucha contra el cáncer de mama, ofreciendo una detección más precisa, oportuna y accesible para todas las mujeres.
+             
+Este proyecto fue desarrollado dentro del programa **Mil Mujeres en IA**:    
+             https://milmujeresia.com/
              """)
     st.write("Esperamos que encuentres esta aplicación útil e informativa. ¡Gracias por visitarnos!")
 
@@ -48,6 +47,18 @@ Juntos, la IA y los profesionales de la salud pueden marcar una diferencia signi
 def quienes_somos():
     st.title("Quiénes Somos")
     st.write("Información sobre la organización o el proyecto.")
+    expander = st.expander("Repositorio")
+    expander.write("Este es nuestro repositorio")
+    expander = st.expander("Agradecimientos")
+    expander.write("""
+
+    - **Nuestros docentes:**
+                   Jonathan Castro y 
+                   Santiago Barreiro
+    - **Bounty, Positivo BGH, Intel**
+    - **UTN**
+
+""")
 
 # Función para la pestaña Clasificador
 def clasificador():
@@ -65,7 +76,7 @@ pages = {
 
 # Barra lateral para la navegación
 st.sidebar.image("M1000ia.png", use_column_width=True)
-st.sidebar.title("M1000IA")
+#st.sidebar.title("M1000IA")
 selection = st.sidebar.radio("Ir a", list(pages.keys()))
 
 # Mostrar la página seleccionada
