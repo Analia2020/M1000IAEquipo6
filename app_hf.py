@@ -76,9 +76,13 @@ pages = {
 
 # Barra lateral para la navegación
 st.sidebar.image("M1000ia.png", use_column_width=True)
+
 #st.sidebar.title("M1000IA")
 selection = st.sidebar.radio("Ir a", list(pages.keys()))
 
 # Mostrar la página seleccionada
 page = pages[selection]
 page()
+
+
+st.sidebar.markdown("⚠️ **Esta herramienta no ha sido validada para uso profesional**")
