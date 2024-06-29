@@ -41,7 +41,7 @@ Juntos, la IA y los profesionales de la salud pueden marcar una diferencia signi
 Este proyecto fue desarrollado dentro del programa **Mil Mujeres en IA**:    
              https://milmujeresia.com/
              """)
-    st.write("Esperamos que encuentres esta aplicación útil e informativa. ¡Gracias por visitarnos!")
+    #st.write("Esperamos que encuentres esta aplicación útil e informativa. ¡Gracias por visitarnos!")
 
 # Función para la pestaña Quiénes Somos
 def quienes_somos():
