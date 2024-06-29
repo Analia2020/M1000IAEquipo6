@@ -85,4 +85,4 @@ page = pages[selection]
 page()
 
 
-st.sidebar.markdown("⚠️ **Esta herramienta no ha sido validada para uso profesional**")
+st.sidebar.markdown("⚠️ **Esta herramienta no ha sido validada para uso profesional, solo tiene fines educativos**")
