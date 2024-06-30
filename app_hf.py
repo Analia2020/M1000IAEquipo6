@@ -1,22 +1,68 @@
 import streamlit as st
 
 # Función para la pestaña Home
+users = {
+    "usuario1": "contraseña1",
+    "usuario2": "contraseña2"
+}
+
+# Función para verificar el login
+def check_login(username, password):
+    if username in users and users[username] == password:
+        return True
+    else:
+        return False
+
+# Función para mostrar el formulario de login
+def login():
+    col1, col2, = st.columns([1, 1])
+    
+    with col2:
+        st.image("M1000ia.png", width=300)  # Ajusta el tamaño de la imagen 1 aquí
+    
+    with col1:
+        st.image("mama2.png", width=200)  # Ajusta el tamaño de la imagen 2 aquí
+
+    #st.image("M1000ia.png", width=300)
+    st.title("Login")
+    
+    
+    username = st.text_input("Nombre de usuario")
+    password = st.text_input("Contraseña", type="password")
+    
+    if st.button("Login"):
+        if check_login(username, password):
+            st.session_state['logged_in'] = True
+            st.session_state['username'] = username
+            st.success("Login exitoso")
+            st.experimental_rerun()
+        else:
+            st.error("Nombre de usuario o contraseña incorrectos")
+
 def home():
+
+    col1, col2 = st.columns([1, 5])
+    
+    with col1:
+        st.image("mama.jpg", use_column_width=True)
+    
+    with col2:
+        
     ##st.title("Nuestro proyecto")
-    st.title(" La Inteligencia Artificial en la lucha contra el cáncer de mama: Clasificador de imagenes de ecografias mamarias")
-    st.write("""
+        st.title(" La Inteligencia Artificial en la lucha contra el cáncer de mama: Clasificador de imagenes de ecografias mamarias")
+        st.write("""
         Esta es la página principal de nuestra aplicación. Aquí puedes encontrar información general 
         y enlaces a otras secciones de la aplicación. Nuestro objetivo es proporcionarte una herramienta 
         útil y fácil de usar para clasificar ecografias mamarias y obtener información sobre nuestra organización.
     """)
-    st.write("""
+        st.write("""
         ## Secciones de la Aplicación
         - **Quiénes Somos:** Conoce más sobre nosotros y nuestra misión.
         - **Clasificador:** Utiliza nuestra herramienta de clasificación de ecografias mamarias.
     """)
 
     #expander = st.expander("## Contexto")
-    st.write("""
+        st.write("""
    
              ## Contexto
 
@@ -38,7 +84,7 @@ La IA **no reemplaza al médico, sino que lo complementa.** Es fundamental recor
 
 Juntos, la IA y los profesionales de la salud pueden marcar una diferencia significativa en la lucha contra el cáncer de mama, ofreciendo una detección más precisa, oportuna y accesible para todas las mujeres.
              
-Este proyecto fue desarrollado dentro del programa **Mil Mujeres en IA**:    
+Este proyecto fue desarrollado dentro del programa **Mil Mujeres en IA**   
              https://milmujeresia.com/
              """)
     #st.write("Esperamos que encuentres esta aplicación útil e informativa. ¡Gracias por visitarnos!")
@@ -76,15 +122,43 @@ pages = {
     "Clasificador": clasificador
 }
 
-# Barra lateral para la navegación
-st.sidebar.image("M1000ia.png", use_column_width=True)
+# # # # Barra lateral para la navegación
+# # # #st.image("M1000ia.png", use_column_width=True)
+# # # st.sidebar.image("M1000ia.png", use_column_width=True)
+# # # #st.sidebar.title("M1000IA")
+# # # selection = st.sidebar.radio("Ir a", list(pages.keys()))
 
-#st.sidebar.title("M1000IA")
-selection = st.sidebar.radio("Ir a", list(pages.keys()))
-
-# Mostrar la página seleccionada
-page = pages[selection]
-page()
+# # # # Mostrar la página seleccionada
+# # # page = pages[selection]
+# # # page()
 
 
-st.sidebar.markdown("⚠️ **Esta herramienta no ha sido validada para uso profesional, solo tiene fines educativos**")
+# # # st.sidebar.markdown("⚠️ **Esta herramienta no ha sido validada para uso profesional, solo tiene fines educativos**")
+
+# Inicializar el estado de sesión
+if 'logged_in' not in st.session_state:
+    st.session_state['logged_in'] = False
+
+# Mostrar el formulario de login o la aplicación según el estado de sesión
+if not st.session_state['logged_in']:
+    login()
+else:
+    # Barra lateral para la navegación
+    #st.sidebar.title("Navegación")
+
+    # Agregar un emoji de cuidado en la barra lateral
+    st.sidebar.markdown("⚠️ **Esta herramienta no ha sido validada para uso profesional, solo tiene fines educativos**")
+
+    # Agregar una imagen en la barra lateral
+    st.sidebar.image("M1000ia.png", use_column_width=True)
+
+    selection = st.sidebar.radio("Ir a", list(pages.keys()))
+
+    # Mostrar la página seleccionada
+    page = pages[selection]
+    page()
+    
+    # Opción para cerrar sesión
+    if st.sidebar.button("Cerrar sesión"):
+        st.session_state['logged_in'] = False
+        st.experimental_rerun()
