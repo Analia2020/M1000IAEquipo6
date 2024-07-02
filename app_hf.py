@@ -92,6 +92,7 @@ Este proyecto fue desarrollado dentro del programa **Mil Mujeres en IA**
 # Función para la pestaña Quiénes Somos
 def quienes_somos():
     st.title("Quiénes Somos")
+    st.image("Home.png", width=700) 
     st.write("Información sobre la organización o el proyecto.")
     expander = st.expander("Repositorio")
     expander.write("Este es nuestro repositorio")
