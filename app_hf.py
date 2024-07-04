@@ -101,7 +101,7 @@ def quienes_somos():
 
     - **Nuestros docentes:**
                    Jonathan Castro y 
-                   Santiago Barreiro
+                   Santiago Ferreiros
     - **Bounty, Positivo BGH, Intel**
     - **UTN**
 
