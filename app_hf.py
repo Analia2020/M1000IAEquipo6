@@ -97,9 +97,11 @@ def quienes_somos():
     expander = st.expander("Repositorio")
     expander.write("""Estos son nuestros repositorios:
                    
-    - https://github.com/Analia2020/M1000IAEquipo6 
+    - Streamlit app: https://github.com/Analia2020/M1000IAEquipo6 
 
-    - https://github.com/Analia2020/M1000IA6 
+    - Proyecto: https://github.com/Analia2020/M1000IA6 
+                   
+    - Hugging Face: https://huggingface.co/spaces/Nancy1906/Equipo_6_Proyecto_breast_cancer 
 
                    """)
     expander = st.expander("Agradecimientos")
