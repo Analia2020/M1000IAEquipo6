@@ -95,7 +95,10 @@ def quienes_somos():
     st.image("Home.png", width=700) 
     st.write("Unidas por el programa **M1000IA**, conformamos el **equipo 6**, un grupo diverso de mujeres de **Argentina, Costa Rica y Colombia.** Nuestras diferentes formaciones se complementan, creando una sinergia que ha sido fundamental para el éxito de este proyecto.")
     expander = st.expander("Repositorio")
-    expander.write("Este es nuestro repositorio")
+    expander.write("""Estos son nuestros repositorios:
+                   - https://github.com/Analia2020/M1000IAEquipo6 
+                   - https://github.com/Analia2020/M1000IA6 
+                   """)
     expander = st.expander("Agradecimientos")
     expander.write("""
 
