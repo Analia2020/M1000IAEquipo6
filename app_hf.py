@@ -97,10 +97,10 @@ def quienes_somos():
     expander = st.expander("Repositorio")
     expander.write("""Estos son nuestros repositorios:
                    
-                   - https://github.com/Analia2020/M1000IAEquipo6 
+    - https://github.com/Analia2020/M1000IAEquipo6 
 
-                   - https://github.com/Analia2020/M1000IA6 
-                   
+    - https://github.com/Analia2020/M1000IA6 
+
                    """)
     expander = st.expander("Agradecimientos")
     expander.write("""
