@@ -80,7 +80,7 @@ La IA ofrece un sinfín de posibilidades para transformar la lucha contra el cá
 
 Los sistemas de IA para la detección del cáncer de mama con ecografías se basan en el aprendizaje automático y el aprendizaje profundo. Estos algoritmos son entrenados con grandes conjuntos de datos de imágenes de ecografías mamarias, tanto con casos de cáncer como benignos. A través del análisis de estas imágenes, la IA aprende a identificar patrones y características asociadas con el cáncer, permitiéndole clasificar nuevas imágenes con alta precisión.
 
-La IA **no reemplaza al médico, sino que lo complementa.** Es fundamental recordar que la IA es una herramienta de apoyo para el diagnóstico médico, no un reemplazo del juicio y la experiencia del médico especialista. La IA debe utilizarse en conjunto con la evaluación clínica para brindar a las pacientes la mejor atención posible.
+La IA **no reemplaza al médico, sino que lo complementa.** Es fundamental recordar que **la IA es una herramienta de apoyo para el diagnóstico médico, no un reemplazo del juicio y la experiencia del médico especialista.** La IA debe utilizarse en conjunto con la evaluación clínica para brindar a las pacientes la mejor atención posible.
 
 Juntos, la IA y los profesionales de la salud pueden marcar una diferencia significativa en la lucha contra el cáncer de mama, ofreciendo una detección más precisa, oportuna y accesible para todas las mujeres.
              
@@ -111,7 +111,7 @@ def quienes_somos():
 def clasificador():
     
     st.write('<iframe src="https://nancy1906-equipo-6-proyecto-breast-cancer.hf.space" width="800" height="600"></iframe>', unsafe_allow_html=True)
-    st.write("⚠️ **Esta herramienta no ha sido validada para uso profesional, solo tiene fines educativos**")
+    #st.write("⚠️ **Esta herramienta no ha sido validada para uso profesional, solo tiene fines educativos**")
     # Aquí puedes agregar el código para tu clasificador
     # Por ejemplo, un clasificador simple de texto:
    
