@@ -93,7 +93,7 @@ Este proyecto fue desarrollado dentro del programa **Mil Mujeres en IA**
 def quienes_somos():
     st.title("Quiénes Somos")
     st.image("Home.png", width=700) 
-    st.write("Unidas por el programa **M1000IA**, conformamos el **equipo 6**, un grupo diverso de mujeres de **Argentina, Costa Rica y Colombia.** Nuestras diferentes formaciones se complementan, creando una sinergia que ha sido fundamental para el éxito de este proyecto.")
+    st.write("Unidas por el programa **M1000IA**, conformamos el **equipo 6**, un grupo diverso de mujeres de **Argentina 🇦🇷, Costa Rica y Colombia.** Nuestras diferentes formaciones se complementan, creando una sinergia que ha sido fundamental para el éxito de este proyecto.")
     expander = st.expander("Repositorio  📦")
     expander.write("""Estos son nuestros repositorios:
                    
